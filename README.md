@@ -34,7 +34,66 @@ Arguments can be specified in the following formats:
 
 ## Examples
 
-*__Coming Soon...__*
+```
+{{auto_increment}}
+{{auto_increment}}
+{{auto_increment}}
+```
+would result in:
+```
+1
+2
+3
+```
+
+
+```
+{{auto_increment}}
+{{auto_increment(foobar)}}
+{{auto_increment}}
+{{auto_increment(foobar)}}
+{{auto_increment(DEFAULT)}}
+```
+would result in:
+```
+1
+1
+2
+2
+3
+```
+
+
+```
+{{auto_increment}}
+{{auto_increment(-)}}
+{{auto_increment(+)}}
+{{auto_increment(=)}}
+{{auto_increment}}
+```
+would result in:
+```
+1
+1
+2
+2
+3
+```
+
+
+```
+{{auto_increment_alpha}}
+{{auto_increment_alpha}}
+{{auto_increment_alpha}}
+{{auto_increment_alpha(-)}}
+```
+would result in:
+```
+a
+b
+c
+b
+```
 
 ## License
 
