@@ -5,11 +5,11 @@ Auto Increment is a [Redmine plugin](http://www.redmine.org/projects/redmine/wik
 
 The plugin is intended for use in wiki documents which include ordered lists (such as procedures) which are too large for the standard ordered list syntax (#).
 
-## Plugin Installation
+## Installation
 
 ```
 cd $REDMINE_ROOT/plugins
-git clone https://github.com/edosoft/emills/redmine-plugin-auto-increment.git auto_increment
+git clone https://github.com/emills/redmine-plugin-auto-increment.git auto_increment
 ```
 Then restart Redmine to apply changes.
 
@@ -17,14 +17,6 @@ Then restart Redmine to apply changes.
 
 *__Coming Soon...__*
 
-## Plugin Removal 
-
-```
-rm -rf $REDMINE_ROOT/plugins/auto_increment
-```
-Then restart Redmine to apply changes.
-
-License
--------
+## License
 
 This plugin is available under the terms of the [GNU General Public License](http://www.gnu.org/licenses/gpl-2.0.html), version 2 or later.
