@@ -26,7 +26,7 @@ Each macro takes the following arguments:
   * **-** : Decrement the value
   * **=** : Do not modify the value
 
-Arugments can be specified in the following formats:
+Arguments can be specified in the following formats:
 * *None*
 * *(variable_name)*
 * *(operations)*
