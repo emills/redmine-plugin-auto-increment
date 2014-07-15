@@ -15,6 +15,25 @@ Then restart Redmine to apply changes.
 
 ## Usage
 
+The following macros are provided:
+* `{{auto_increment}}` - Increments a number with the first call returning '1'.
+* `{{auto_increment_alpha}}` - Increments an alpha string using standard Ruby incrementation ('a' -> 'b' ... 'z' -> 'aa') with the first call returning 'a'.
+
+Each macro takes the following arguments:
+* **variable_name** - The name of the variable to increment. Names are distinct between macros and when not specified the variable name 'DEFAULT' will be used.
+* **operations** - The operation to perform before return a value. Defaults to '+' when not specified.
+  * **+** : Increment the value
+  * **-** : Decrement the value
+  * **=** : Do not modify the value
+
+Arugments can be specified in the following formats:
+* *None*
+* *(variable_name)*
+* *(operations)*
+* *(variable_name, operation)*
+
+## Examples
+
 *__Coming Soon...__*
 
 ## License
