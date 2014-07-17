@@ -1,5 +1,5 @@
-module Macros
-  class AutoIncrement
+module WikiAutoIncrement
+  class Macros
     DEFAULT_VALUE_NAME = 'DEFAULT'
     OPERATION_MAPPING = { "+" => :increment, '-' => :decrement, '=' => :current, '!' => :reset }
     DEFAULT_OPERATION = :increment
@@ -52,26 +52,26 @@ module Macros
       desc ""
       macro :auto_increment do |obj, args|
         @values ||= {}
-        Macros::AutoIncrement.doAutoIncrement(@values, args)
+        WikiAutoIncrement::Macros.doAutoIncrement(@values, args)
       end
 
       desc ""
       macro :auto_increment_alpha do |obj, args|
         @values_alpha_lower ||= {}
-        Macros::AutoIncrement.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
+        WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
       end
       
       desc ""
       macro :auto_increment_lower do |obj, args|
         @values_alpha_lower ||= {}
-        Macros::AutoIncrement.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
+        WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
       end
 
 
       desc ""
       macro :auto_increment_upper do |obj, args|
         @values_alpha_upper ||= {}
-        Macros::AutoIncrement.doAlphaAutoIncrement(ALPHA_UPPER, @values_alpha_upper, args)
+        WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_UPPER, @values_alpha_upper, args)
       end
     end
 

@@ -1,9 +1,9 @@
 
 require 'redmine'
 
-require_dependency 'macros/auto_increment'
+require_dependency 'wiki_auto_increment_macros'
 
-Redmine::Plugin.register :auto_increment do
+Redmine::Plugin.register :wiki_auto_increment do
   name 'Auto Increment Wiki Macros'
   author 'Eric Mills'
   description 'Provides wiki macros for auto incrementing values'
