@@ -21,7 +21,7 @@ The following macros are provided:
 
 Each macro takes the following arguments:
 * **variable_name** - The name of the variable to increment. Names are distinct between macros and when not specified the variable name 'DEFAULT' will be used.
-* **operations** - The operation to perform before return a value. Defaults to '+' when not specified.
+* **operation** - The operation to perform before return a value. Defaults to '+' when not specified.
   * **+** : Increment the value
   * **-** : Decrement the value
   * **=** : Do not modify the value
@@ -74,10 +74,10 @@ would result in:
 would result in:
 ```
 1
+0
+1
 1
 2
-2
-3
 ```
 
 
