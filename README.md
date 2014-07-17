@@ -126,6 +126,6 @@ This plugin is available under the terms of the [GNU General Public License](htt
 
 ## Change Log
 
-### 14.07.XX
+#### 14.07.XX
 
 Initial Release
