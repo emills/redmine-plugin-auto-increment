@@ -54,19 +54,18 @@ module WikiAutoIncrement
         @values ||= {}
         WikiAutoIncrement::Macros.doAutoIncrement(@values, args)
       end
-
-      desc ""
-      macro :auto_increment_alpha do |obj, args|
-        @values_alpha_lower ||= {}
-        WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
-      end
       
       desc ""
       macro :auto_increment_lower do |obj, args|
         @values_alpha_lower ||= {}
         WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
       end
-
+      
+      desc "Alias of \{{auto_increment_alpha_lower}}"
+      macro :auto_increment_alpha do |obj, args|
+        @values_alpha_lower ||= {}
+        WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
+      end
 
       desc ""
       macro :auto_increment_upper do |obj, args|
