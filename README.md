@@ -5,6 +5,15 @@ Auto Increment is a [Redmine plugin](http://www.redmine.org/projects/redmine/wik
 
 The plugin is intended for use in wiki documents which include ordered lists (such as procedures) which are too large for the standard ordered list syntax (#).
 
+## Compatibility
+
+There are no known conflicts or incompatibilities between this plugin and any version of Redmine.
+It is fully tested on the following versions using Ruby 1.9.3:
+* 0.8.4
+* 2.2.3
+
+If any version incompatibilities are found, please submit an issue.
+
 ## Installation
 
 ```
