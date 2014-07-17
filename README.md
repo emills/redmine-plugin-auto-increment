@@ -17,14 +17,16 @@ Then restart Redmine to apply changes.
 
 The following macros are provided:
 * `{{auto_increment}}` - Increments a number with the first call returning '1'.
-* `{{auto_increment_alpha}}` - Increments an alpha string using standard Ruby incrementation ('a' -> 'b' ... 'z' -> 'aa') with the first call returning 'a'.
+* `{{auto_increment_alpha}}` or `{{auto_increment_alpha_lower}}`- Increment the lower case alphabet with the first call returning 'a'. When 'z' is reached the counter will wrap to 'a'.
+* `{{auto_increment_alpha_upper}}` - Increment the upper case alphabet with the first call returning 'A'. When 'Z' is reached the counter will wrap to 'A'.
 
 Each macro takes the following arguments:
-* **variable_name** - The name of the variable to increment. Names are distinct between macros and when not specified the variable name 'DEFAULT' will be used.
+* **variable_name** - The name of the variable to increment. Names are distinct between numeric/uppercase/lowercase macros and when not specified the variable name 'DEFAULT' will be used.
 * **operation** - The operation to perform before return a value. Defaults to '+' when not specified.
   * **+** : Increment the value
   * **-** : Decrement the value
   * **=** : Do not modify the value
+  * **!** : Reset the value back to the initial value
 
 Arguments can be specified in the following formats:
 * *None*
@@ -83,8 +85,10 @@ would result in:
 
 ```
 {{auto_increment_alpha}}
+{{auto_increment_alpha_lower}}
 {{auto_increment_alpha}}
-{{auto_increment_alpha}}
+{{auto_increment_alpha(-)}}
+{{auto_increment_alpha(=)}}
 {{auto_increment_alpha(-)}}
 ```
 would result in:
@@ -93,6 +97,27 @@ a
 b
 c
 b
+b
+a
+```
+
+
+```
+{{auto_increment_alpha_upper}}
+{{auto_increment_alpha_upper}}
+{{auto_increment_alpha_upper}}
+{{auto_increment_alpha_upper(-)}}
+{{auto_increment_alpha_upper(=)}}
+{{auto_increment_alpha_upper(-)}}
+```
+would result in:
+```
+A
+B
+C
+B
+B
+A
 ```
 
 ## License
