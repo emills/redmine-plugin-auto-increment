@@ -75,7 +75,7 @@ module WikiAutoIncrement
         WikiAutoIncrement::Macros.doAlphaAutoIncrement(ALPHA_LOWER, @values_alpha_lower, args)
       end
 
-      desc "Increment the upper case alphabet with the first call returning 'A'. When 'Z' is reached the counter will wrap to 'A'." + 
+      desc "Increment the upper case alphabet with the first call returning 'A'. When 'Z' is reached the counter will wrap to 'A'." +
       "  !{{auto_increment_upper}} -- Will return A on first use, B on second use, etc." +
       "  !{{auto_increment_upper(foobar)}} -- Will associate the incremented value with the name 'foobar'. Allows for multiple increments on the same page." +
       "  !{{auto_increment_upper(operation)}} -- Performs specified operation against current value. (+ => Add One, - => Subtract One, = => Current Value, ! => Reset To 1)" +
